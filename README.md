@@ -24,3 +24,18 @@ Replicate the look and feel of the [Apple Weather App](https://github.com/OatsOv
 * There are some timezone issues when switching cities. 
 * The APIs from Open Meteo and Open Cage take a while to respond in some cases. 
 * When a user searches for a city sometimes there are duplicates in the listed cities. 
+
+
+### Local Development
+
+```bash
+yarn install
+yarn dev
+```
+
+### Build for Production
+
+```bash
+yarn build
+yarn preview
+```
