@@ -90,10 +90,10 @@ const addSunriseSunset = (weatherJson: any) => {
   // Only add sunset if it hasn't happened yet
   if (currentTime < sunsetTime) {
     const sunsetIndex = hourlyTimes.findIndex(time => new Date(time).getTime() >= sunsetTime.getTime())
-    if (sunsetIndex !== -1 && sunsetIndex + 1 < hourlyTimes.length) {
-      hourlyTimes.splice(sunsetIndex + 1, 0, sunset)
-      hourlyTemps.splice(sunsetIndex + 1, 0, 'Sunset')
-      hourlyWeatherCodes.splice(sunsetIndex + 1, 0, 101)
+    if (sunsetIndex !== -1) {
+      hourlyTimes.splice(sunsetIndex, 0, sunset)
+      hourlyTemps.splice(sunsetIndex, 0, 'Sunset')
+      hourlyWeatherCodes.splice(sunsetIndex, 0, 101)
     }
   }
 
